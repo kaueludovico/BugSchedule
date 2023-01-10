@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScheduleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textViewTypeService"
+        android:layout_width="170sp"
+        android:layout_height="41sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Tipo de serviço"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextDateSchedule"
+        android:layout_width="257dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Data"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textViewTypeService"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTypeService" />
+
+    <EditText
+        android:id="@+id/editTextCountrySchedule"
+        android:layout_width="380dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="País"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStateSchedule"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextCitySchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCitySchedule" />
+
+    <EditText
+        android:id="@+id/editTextCitySchedule"
+        android:layout_width="305dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Cidade"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextDistrictSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDistrictSchedule" />
+
+    <EditText
+        android:id="@+id/editTextNumberSchedule"
+        android:layout_width="100dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Número"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalendarSchedule"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/editTextDistrictSchedule"
+        app:layout_constraintTop_toTopOf="@+id/editTextDistrictSchedule" />
+
+    <EditText
+        android:id="@+id/editTextDistrictSchedule"
+        android:layout_width="275dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Bairro"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextAddressSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddressSchedule" />
+
+    <Button
+        android:id="@+id/buttonCalendarSchedule"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Calendario"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextDateSchedule"
+        app:layout_constraintTop_toTopOf="@+id/editTextDateSchedule" />
+
+    <EditText
+        android:id="@+id/editTextStateSchedule"
+        android:layout_width="68dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="UF"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumberSchedule"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextCitySchedule"
+        app:layout_constraintTop_toTopOf="@+id/editTextCitySchedule" />
+
+    <EditText
+        android:id="@+id/editTextAddressSchedule"
+        android:layout_width="380dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Logradouro"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalendarSchedule"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextDateSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDateSchedule" />
+
+    <Button
+        android:id="@+id/buttonSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Agendar"
+        app:layout_constraintEnd_toEndOf="@+id/editTextCountrySchedule"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/editTextCountrySchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCountrySchedule" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
