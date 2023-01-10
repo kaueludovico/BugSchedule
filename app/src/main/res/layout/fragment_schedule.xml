@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScheduleFragment">
+    tools:context=".view.ScheduleFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/textViewTypeService"
         android:layout_width="170sp"
@@ -20,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
         android:id="@+id/editTextDateSchedule"
         android:layout_width="257dp"
@@ -28,22 +26,24 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Data"
+        android:text="10/01/2023"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/textViewTypeService"
         app:layout_constraintTop_toBottomOf="@+id/textViewTypeService" />
 
     <EditText
-        android:id="@+id/editTextCountrySchedule"
+        android:id="@+id/editTextAddressSchedule"
         android:layout_width="380dp"
         android:layout_height="46dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
-        android:hint="País"
+        android:hint="Logradouro"
+        android:text="Avenida Getulio Vargas"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/editTextStateSchedule"
+        app:layout_constraintEnd_toEndOf="@+id/buttonCalendarSchedule"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextCitySchedule"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCitySchedule" />
+        app:layout_constraintStart_toStartOf="@+id/editTextDateSchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDateSchedule" />
 
     <EditText
         android:id="@+id/editTextCitySchedule"
@@ -52,6 +52,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="Cidade"
+        android:text="Poá"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/editTextDistrictSchedule"
         app:layout_constraintTop_toBottomOf="@+id/editTextDistrictSchedule" />
@@ -63,6 +64,7 @@
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Número"
+        android:text="911"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/buttonCalendarSchedule"
         app:layout_constraintHorizontal_bias="0.875"
@@ -76,6 +78,7 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="Bairro"
+        android:text="Calmon Viana"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/editTextAddressSchedule"
         app:layout_constraintTop_toBottomOf="@+id/editTextAddressSchedule" />
@@ -102,6 +105,7 @@
         android:layout_marginTop="4dp"
         android:ems="10"
         android:hint="UF"
+        android:text="SP"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/editTextNumberSchedule"
         app:layout_constraintHorizontal_bias="1.0"
@@ -109,17 +113,20 @@
         app:layout_constraintTop_toTopOf="@+id/editTextCitySchedule" />
 
     <EditText
-        android:id="@+id/editTextAddressSchedule"
+        android:id="@+id/editTextCountrySchedule"
         android:layout_width="380dp"
         android:layout_height="46dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Logradouro"
+        android:hint="País"
+        android:text="Brasil"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/buttonCalendarSchedule"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStateSchedule"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextDateSchedule"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDateSchedule" />
+        app:layout_constraintStart_toStartOf="@+id/editTextCitySchedule"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCitySchedule" />
+
+
 
     <Button
         android:id="@+id/buttonSchedule"

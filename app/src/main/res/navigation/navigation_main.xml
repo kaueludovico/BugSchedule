@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/scheduleFragment"
-        android:name="com.bigrocket.limpezaapp.ScheduleFragment"
+        android:name="com.bigrocket.limpezaapp.view.ScheduleFragment"
         android:label="fragment_schedule"
         tools:layout="@layout/fragment_schedule" >
         <argument
@@ -54,9 +54,21 @@
     </fragment>
     <fragment
         android:id="@+id/successFragment"
-        android:name="com.bigrocket.limpezaapp.SuccessFragment"
+        android:name="com.bigrocket.limpezaapp.view.SuccessFragment"
         android:label="fragment_success"
         tools:layout="@layout/fragment_success" >
+        <argument
+            android:name="schedule"
+            app:argType="com.bigrocket.limpezaapp.model.Schedule" />
+        <action
+            android:id="@+id/action_successFragment_to_listServiceFragment"
+            app:destination="@id/listServiceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listServiceFragment"
+        android:name="com.bigrocket.limpezaapp.view.ListServiceFragment"
+        android:label="fragment_list_service"
+        tools:layout="@layout/fragment_list_service" >
         <argument
             android:name="schedule"
             app:argType="com.bigrocket.limpezaapp.model.Schedule" />
