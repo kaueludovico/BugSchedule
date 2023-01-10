@@ -10,10 +10,11 @@ import com.bigrocket.limpezaapp.resource.DataSourceSchedule
 import com.bigrocket.limpezaapp.resource.ListServiceAdapter
 import kotlinx.android.synthetic.main.fragment_list_service.*
 
-
 class ListServiceFragment : Fragment(R.layout.fragment_list_service) {
 
-    private lateinit var adapter: ListServiceAdapter
+    // Nome da variável deve ser diferente de somente adapter como está no vídeo
+    // O Kotlin não consegue distinguir o que é variável e o que é propriedade do RecyclerView
+    private lateinit var listAdapter: ListServiceAdapter
     private val args: ListServiceFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -24,17 +25,17 @@ class ListServiceFragment : Fragment(R.layout.fragment_list_service) {
     }
 
     private fun initAdapter() {
-        adapter = ListServiceAdapter()
+        listAdapter = ListServiceAdapter()
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(requireContext())
-            adapter = adapter
+            adapter = listAdapter
         }
     }
 
     private fun populateRecycler() {
         DataSourceSchedule.createSchedule(args.schedule) {
-            adapter.setDataSet(it)
+            listAdapter.setDataSet(it)
         }
     }
 }
